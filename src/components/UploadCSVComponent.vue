@@ -4,7 +4,7 @@
         <h3 class="text-center">Upload User CSV</h3>
         <form @submit.prevent="handleSubmitForm">
           <div class="form-group">
-            <label>CSV File or XLSX</label>
+            <label>XLSX File</label>
             <input
               type="file"
               class="form-control"

@@ -15,7 +15,7 @@
             <router-link class="navbar-brand" to="/view">View Users</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="navbar-brand" to="/upload">Upload User CSV</router-link>
+            <router-link class="navbar-brand" to="/upload">Upload User XLSX</router-link>
           </li>
         </ul>
       </div>
