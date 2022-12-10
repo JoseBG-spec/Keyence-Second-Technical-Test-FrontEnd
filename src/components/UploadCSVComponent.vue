@@ -38,7 +38,7 @@
       handleSubmitForm() {
         const formData = new FormData();
         formData.append('file', this.file);
-        let apiURL = "http://localhost:4000/api/upload-file";
+        let apiURL = `${process.env.VUE_APP_DB_URI}/upload-file`;
   
         axios
           .post(apiURL, formData)

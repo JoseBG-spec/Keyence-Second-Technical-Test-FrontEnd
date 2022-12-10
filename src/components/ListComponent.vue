@@ -41,7 +41,7 @@
             }
         },
         created() {
-            let apiURL = 'http://localhost:4000/api';
+            let apiURL = `${process.env.VUE_APP_DB_URI}`;
             axios.get(apiURL).then(res => {
                 //console.log(res.data)
                 this.Users = res.data;
@@ -51,7 +51,7 @@
         },
         methods: {
             deleteUser(id){
-                let apiURL = `http://localhost:4000/api/delete-user/${id}`;
+                let apiURL = `${process.env.VUE_APP_DB_URI}/delete-user/${id}`;
                 let indexOfArrayItem = this.Users.findIndex(i => i._id === id);
                 if (window.confirm("Do you really want to delete?")) {
                     axios.delete(apiURL).then(() => {

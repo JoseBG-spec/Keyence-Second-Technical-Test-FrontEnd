@@ -77,7 +77,7 @@
       };
     },
     created() {
-      let apiURL = `http://localhost:4000/api/edit-user/${this.$route.params.id}`;
+      let apiURL = `${process.env.VUE_APP_DB_URI}/edit-user/${this.$route.params.id}`;
   
       axios.get(apiURL).then((res) => {
         this.user = res.data;

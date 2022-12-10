@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     handleSubmitForm() {
-      let apiURL = "http://localhost:4000/api/create-user";
+      let apiURL = `${process.env.VUE_APP_DB_URI}/create-user`;
 
       axios
         .post(apiURL, this.user)

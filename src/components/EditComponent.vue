@@ -72,7 +72,7 @@ export default {
     };
   },
   created() {
-    let apiURL = `http://localhost:4000/api/edit-user/${this.$route.params.id}`;
+    let apiURL = `${process.env.VUE_APP_DB_URI}/edit-user/${this.$route.params.id}`;
 
     axios.get(apiURL).then((res) => {
       this.user = res.data;
@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     handleUpdateForm() {
-      let apiURL = `http://localhost:4000/api/update-user/${this.$route.params.id}`;
+      let apiURL = `${process.env.VUE_APP_DB_URI}/update-user/${this.$route.params.id}`;
 
       axios
         .put(apiURL, this.user)
